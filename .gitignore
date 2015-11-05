@@ -32,6 +32,7 @@ node_modules
 
 # Project specific
 backup
+**/images
 **/media
 **/*.png
 **/*.ico
