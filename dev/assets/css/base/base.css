@@ -1,0 +1,13 @@
+/*
+ * Filename: base.css
+ *
+ * Primary stylesheet which imports every other file.
+ */
+
+ * {
+  box-sizing: border-box;
+ }
+
+ body {
+  -webkit-font-smoothing: antialiased;
+ }

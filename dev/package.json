@@ -1,0 +1,28 @@
+{
+  "name": "template-project",
+  "version": "1.0.0",
+  "description": "Template Project for kinderDerZeit – kreativagentur",
+  "scripts": {
+    "start": "npm run watch-js & npm run watch-css",
+    "build-project": "npm run build-js & npm run build-css & npm run build-img & node favicons.js",
+    "build-css": "cssnext -c -U assets/css/main.css ../dist/style.min.css",
+    "watch-css": "cssnext -w -s assets/css/main.css ../dist/style.css",
+    "build-js": "browserify assets/js/script.js -p [minifyify --no-map] -o ../dist/script.min.js",
+    "watch-js": "watchify -d assets/js/script.js -o ../dist/script.js",
+    "build-img": "imagemin assets/images/* ../dist/img/",
+    "clean-dist": "node clean.js",
+    "prebuild-js": "standard assets/js/**/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fabian Gündel",
+  "license": "ISC",
+  "dependencies": {
+    "domready": "^1.0.8"
+  },
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "cssnext": "^1.8.4",
+    "favicons": "^3.2.0",
+    "minifyify": "^7.1.0"
+  }
+}
